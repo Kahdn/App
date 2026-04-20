@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>9. Formulario Biblioteca</title>
+    <style>
+        table, td { font-family: verdana; border: 2px solid black; border-collapse: collapse; color: blue; }
+        td { padding: 5px; }
+        h3 { font-family: courier; color: red; font-size: 150%; }
+        body { background-color: powderblue; }
+    </style>
+</head>
+<body>
+<center><h3>Registro de Libros</h3>
+<form method="post">
+    <table>
+        <tr><td>Nombre</td><td><input type="text" name="nombre" required></td></tr>
+        <tr><td>Autor(es)</td><td><input type="text" name="autor" required></td></tr>
+        <tr><td>Editorial</td><td><input type="text" name="editorial"></td></tr>
+        <tr><td>Año</td><td><input type="number" name="anio" min="2021" max="2026" required></td></tr>
+        <tr><td>País</td>
+            <td>
+                <select name="pais" required>
+                    <option>México</option>
+                    <option>España</option>
+                    <option>Cuba</option>
+                </select>
+            </td>
+        </tr>
+        <tr><td>Páginas</td><td><input type="number" name="paginas" min="1"></td></tr>
+        <tr><td>Precio</td><td><input type="number" name="precio" min="100" step="1"></td></tr>
+        <tr><td>Edición</td><td><input type="text" name="edicion"></td></tr>
+        <tr><td>ISBN</td><td><input type="text" name="isbn"></td></tr>
+        <tr><td colspan="2" align="center"><input type="submit" value="Guardar"> <input type="reset" value="Borrar"></td></tr>
+    </table>
+</form>
+        <a href="index_u2.html">Regresar</a><br>
+
+</center>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>8. Formulario Inder</title>
+    <style>
+        table, td {
+            font-family: verdana;
+            border: 2px solid black;
+            border-collapse: collapse;
+            color: blue;
+        }
+        td { padding: 5px; }
+        h3 { font-family: courier; color: red; font-size: 150%; }
+        body { background-color: powderblue; }
+    </style>
+</head>
+<body>
+<center><h3>Registro de Infante</h3>
+<form method="post">
+    <table>
+        <tr><td>Nombre del Infante</td><td><input type="text" name="nombre" required="true" maxlength="40"></td></tr>
+        <tr><td>Edad</td><td><input type="number" name="edad" min="3" max="6" required="true"></td></tr>
+        <tr><td>Fecha de Nacimiento</td><td><input type="date" name="nacimiento" required="true"></td></tr>
+        <tr><td>Correo</td><td><input type="email" name="correo" required="true"></td></tr>
+        <tr><td>Domicilio</td><td><input type="text" name="domicilio" required="true"></td></tr>
+        <tr><td>Teléfono</td><td><input type="tel" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td></tr>
+        <tr><td>Celular</td><td><input type="tel" name="celular" pattern="[0-9]{10}"></td></tr>
+        <tr><td>Municipio (Nayarit)</td>
+            <td>
+                <select name="municipio" required="true">
+                    <option>Tepic</option>
+                    <option>Santiago Ixcuintla</option>
+                    <option>Compostela</option>
+                    <option>Bahía de Banderas</option>
+                    <option>San Blas</option>
+                </select>
+            </td>
+        </tr>
+        <tr><td colspan="2" align="center"><input type="submit" value="Guardar"> <input type="reset" value="Borrar"></td></tr>
+    </table>
+</form>
+        <a href="index_u2.html">Regresar</a><br>
+
+</center>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gemini API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Integración Gemini API</h1>
+</header>
+
+<nav>
+    <a href="examen-unidad-2.html">Inicio</a>
+    <a href="tiktok-api.html">TikTok</a>
+    <a href="chatgpt-api.html">ChatGPT</a>
+</nav>
+
+<section class="card">
+    <h2>Consulta a Gemini</h2>
+
+    <textarea id="preguntaGemini" placeholder="Escribe tu pregunta"></textarea>
+    <button onclick="consultarGemini()">Enviar</button>
+
+    <p id="respuestaGemini"></p>
+</section>
+
+<script>
+async function consultarGemini() {
+
+    const pregunta = document.getElementById("preguntaGemini").value;
+
+    const response = await fetch("http://localhost:3000/gemini", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ pregunta })
+    });
+
+    const data = await response.json();
+
+    console.log(data); // 👈 AGREGA ESTO
+
+    if (data.candidates) {
+        document.getElementById("respuestaGemini").innerText =
+            data.candidates[0].content.parts[0].text;
+    } else {
+        document.getElementById("respuestaGemini").innerText =
+            "Error: " + JSON.stringify(data);
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatGPT API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Integración ChatGPT API</h1>
+</header>
+
+<nav>
+    <a href="examen-unidad-2.html">Inicio</a>
+    <a href="tiktok-api.html">TikTok</a>
+    <a href="gemini-api.html">Gemini</a>
+</nav>
+
+<section class="card">
+    <h2>Consulta a ChatGPT</h2>
+
+    <textarea id="pregunta" placeholder="Escribe tu pregunta"></textarea>
+    <button onclick="consultarChatGPT()">Enviar</button>
+
+    <p id="respuesta"></p>
+</section>
+
+<script>
+async function consultarChatGPT() {
+
+    const pregunta = document.getElementById("pregunta").value;
+
+    const response = await fetch("http://localhost:3000/chatgpt", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ pregunta })
+    });
+
+    const data = await response.json();
+
+    console.log(data); // 👈 AGREGA ESTO
+
+    if (data.choices) {
+        document.getElementById("respuesta").innerText =
+            data.choices[0].message.content;
+    } else {
+        document.getElementById("respuesta").innerText =
+            "Error: " + JSON.stringify(data);
+    }
+}
+
+</script>
+
+</body>
+</html>
