@@ -11,7 +11,7 @@
         <h1>Examen Unidad 4</h1>
         <p>Solamente hicimos una página web donde pusimos todos los trabajos de todas las unidades.</p>
         <br>
-        <a href="index.jsp">Regresar</a>
+        <a href="index_u4.jsp">Regresar</a>
         <br><br>
         <hr width="40%">
         <footer>
