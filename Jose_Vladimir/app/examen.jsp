@@ -11,7 +11,7 @@
         <h1>Examen Unidad 4</h1>
         <p>Solamente hicimos una página web donde pusimos todos los trabajos de todas las unidades.</p>
 
-        <img src="Jose_Vladimir/app/Captura de pantalla 2026-04-20 221253.png" alt="Captura de pantalla" width="400">
+        <img src="../app/Captura de pantalla 2026-04-20 221253.png" alt="Captura de pantalla" width="400">
 
         <br>
         <a href="index_u4.jsp">Regresar</a>
